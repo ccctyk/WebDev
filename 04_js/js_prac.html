@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    //1. Use JavaScript to print the first 10 numbers that are multiples of 4 but not 5 between 0 and 100.
+    console.log('Exercise1:');
+    let counter = 0;
+    for(let i = 0;i <= 100; i++){
+        if(i % 4 == 0 & i % 5 != 0){
+            counter ++;
+            if(counter <= 10) console.log(i);
+        }
+    }
+    console.log('Exercise2:');
+    //2.  (TWO SUM) Given an array of integers, find two numbers such that they add up to a specific target number.
+    function twoSum(inputArray, target) {
+        const array = new Map();
+        for(let i=0;i<inputArray.length;i++){
+            array.set(inputArray[i],i);
+        }
+        for(let i=0;i<inputArray.length;i++){
+            if(array.has(target-inputArray[i])&array.get(target-inputArray[i])!=i){
+                return [i,array.get(target - inputArray[i])];
+            }
+        }
+    }
+    console.log(twoSum([1,4,7,8],12));
+    console.log('Exercise3:');
+    //2. Simple, given a string of words, return the length of the shortest word(s). String will never be empty and you do not need to account for different data types.
+    function shortestword(s) {
+        let words = s.split(" ");
+        let shortestlength=words[0].length;
+        for(let i = 0;i <words.length;i++){
+            if(words[i].length < shortestlength){
+                shortestlength = words[i].length;
+            } 
+        }
+        return shortestlength;
+    }
+    console.log(shortestword('Given an array of integers'));
+</script>
+<body>
+    
+</body>
+</html>
