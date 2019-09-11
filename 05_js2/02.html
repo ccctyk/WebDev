@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    for (var i = 0; i < 5; i++) {
+        var btn = document.createElement('button');
+        btn.appendChild(document.createTextNode('Button ' + i));
+        (function(arg){ 
+            btn.addEventListener('click',function(){ console.log(arg); }) 
+        })(i)
+        document.body.appendChild(btn);
+    }
+    // 5 was logged when user press button 4, and same for button 1 to button 3
+    // this is because var is lexical scope, value i will leek between for loop
+    // First way to fix it is change var to let
+    // Another way to fix it is use IIFE as above
+
+</script>
+
+</html>
