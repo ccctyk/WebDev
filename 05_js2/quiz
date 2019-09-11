@@ -1,0 +1,13 @@
+1. Implement a Person class. We need to store height, weight and BMI data in the class. We do not want other people to access weight directly and we want to calculate BMI based on height and weight. Make sure you can change height and weight anytime after the instance is initialised.
+Bonus 1: Make sure the height is always between 0 – 300 cm. Make sure the weight is always between 0 and 1000kg.
+Bonus 2: Assume that the person’s height is fixed. Allow set weight based on BMI.
+
+2. What gets logged when user clicks on the ‘Button 4’ and why? If there is a problem with this implementation, can you use two different methods to fix it?
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function(){ console.log(i); });
+  document.body.appendChild(btn);
+}
+
+3. Write a JavaScript program to determine whether a given year is a leap year (you do not need to consider BC years)
