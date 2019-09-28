@@ -9,18 +9,18 @@ const Twitter = () => {
 	return <>
 		<div className="twitter-feed">
             <div><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" color="blue"/></div>
-            <div className="feed-title">Twitter Feed</div>
-            <div className="feed-position">#France</div>
+            <h1 className="twitter-feed-title">Twitter Feed</h1>
+            <h1 className="twitter-feed-position">#France</h1>
         </div>
         <div className="feedback">
             <div className="photo">T</div>
-            <div className="message">Dont't forget your suncream tomorrow!</div>
+            <p className="message">Dont't forget your suncream tomorrow!</p>
         </div>
         <div className="feedback">
             <div className="photo">Y</div>
-            <div className="message">Amazing weather in Paris.</div>
+            <p className="message">Amazing weather in Paris.</p>
         </div>
-        <div className="next">NEXT<FontAwesomeIcon icon={['fas', 'chevron-right']} size="1x"/></div>
+        <div className="twitter-next">NEXT<FontAwesomeIcon icon={['fas', 'chevron-right']} size="1x"/></div>
 	</>;
 }
 

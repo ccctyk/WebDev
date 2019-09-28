@@ -2,18 +2,18 @@ import React from 'react';
 
 const CityWeather = () => {
 	return <>
-		<div className="header-temp">
+		<div className="card-header-temperature">
             <div className="temp-and-circle">
                 <div className="temp">12</div>
-                <div className="temp-circle"></div>
+                <div className="celsius"></div>
             </div>
-            <div className="weather">CLOUDY</div>
+            <p className="card-header-weather">CLOUDY</p>
             <div className="header-whether">
-                <div className="humudity-value header-weather-detail">
+                <div className="humudity-value">
                     <h1 className="head-value-humudity">HUMUDITY</h1>
                     <p className="humi-value">64%</p>
                 </div>
-                <div className="wind-value header-weather-detail">
+                <div className="wind-value">
                     <h1 className="head-value-wind">WIND</h1>
                     <p className="win-value">12 K/M</p>
                 </div>
