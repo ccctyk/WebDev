@@ -8,6 +8,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Header from './components/Header';
 import Main from './components/Main';
+import SignUpForm from './components/SignUpForm'
 
 library.add(fab, fas, far);
 
@@ -17,6 +18,7 @@ library.add(fab, fas, far);
 function App() {
   return (
       <>
+      <SignUpForm />
       <Header /> 
       <Main />
       </>
