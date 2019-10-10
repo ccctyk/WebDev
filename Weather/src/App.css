@@ -1,0 +1,341 @@
+
+body,html{
+    height:100%;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: arial;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+    width: 100%;
+    height:100%;
+    /* background-image: url(https://desk-fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/01/0E/ChMkJlbKweiIFY_6AA3VjT9w7FMAALGfwFCj8AADdWl862.jpg);
+    background-repeat:no-repeat;
+    background-size: cover; */
+    /* -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; */
+}
+
+li{ list-style: none;}
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px; 
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/summer-slide.jpg) 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/fall-slide.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/winter-slide.jpg);
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571250994&di=03fc1e465357f46f3826ab8e1c614359&imgtype=jpg&er=1&src=http%3A%2F%2Fimg3.iqilu.com%2Fdata%2Fattachment%2Fforum%2F201308%2F21%2F191834vui5u5917xiyziw6.jpg);
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(https://www.hdwallpapers.in/download/raining_stars_dream-HD.jpg);
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(http://getwallpapers.com/wallpaper/full/8/1/a/1051978-download-sunny-day-wallpaper-2560x1600-smartphone.jpg);
+    animation-delay: 30s; 
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+h1,h2,h3,h4{font-weight:normal}
+
+header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.nav-icon{
+    padding: 16px;
+}
+
+.card {
+    margin: 0 auto;
+    width: 1035px;
+    height: 735px;
+    border-radius: 10px;
+    /*border-color:#ff0000 #0000ff;*/
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #fff;
+    justify-content: center;
+    align-content: center;
+    opacity: 0.9
+}
+
+.card-header{
+    display:flex;
+    width: 1035px;
+    height: 350px;
+    border-radius: 10px 10px 0 0;
+    align-items: center;
+    background-image: url(./paris.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    
+}
+
+.card-header-temperature{
+    padding:32px 32px 32px 32px;
+    width: 360px;
+    height: 290px;
+    position: absolute;
+}
+
+.temp-and-circle{
+    display: flex;
+}
+
+.temp{
+    display: flex;
+    padding-top: 32px;
+    padding-left: 90px;
+    overflow: hidden;
+    position: relative;
+    font-size: 7rem;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    user-select: none;
+    justify-content: center;
+    color: white;
+}
+
+.celsius{
+    margin-top: 32px;
+    border: 5px solid;
+	height: 15px;
+	width: 15px;
+	margin-left: 10px;
+    border-radius: 50%;
+    color: white;
+}
+
+.card-header-weather{
+    display: flex;
+    margin-left: 80px;
+    font-family: "Arial";
+    letter-spacing:3px;
+    color: white;
+}
+
+.header-position{
+    padding: 0px 100px 125px 0px;
+    margin-left: auto;
+    font-size: 1.25rem;
+    font-family: "Arial";
+    letter-spacing:3px;
+    text-decoration:underline;
+    color: white;
+
+}
+
+
+
+.header-whether{
+    display: flex;
+    padding-top: 32px;
+    padding-left: 30px; 
+}
+
+.head-value-humudity{
+    letter-spacing:2px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-right:10px;
+}
+
+.head-value-wind{
+    letter-spacing:2px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-left:10px;
+}
+
+.wind{
+    letter-spacing:3px;
+    color: white;
+}
+
+
+.wind-value{
+    border-left: 1px solid white;
+    padding-left: 16px;
+    color: white;
+}
+
+.humi-value{
+    margin-left: 16px;
+    padding-left: 16px;
+    color: white;
+}
+
+.win-value{
+    margin-left: 16px;
+}
+
+.humidity{
+    padding-right: 16px;
+}
+
+.wind{
+    padding-left: 16px;
+}
+
+.card-content{
+   padding-top: 64px;
+   display: flex;
+   z-index: 90;
+   justify-content: space-between;
+   background: white no-repeat;
+   background-size:cover;
+}
+
+.card-content-left{
+    width: 35%;
+}
+
+
+.twitter-feed{
+    display: flex;
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+ }
+ 
+
+.twitter-icon{
+    height: 24px;
+}
+
+.twitter-feed-title{
+    margin-left: 16px;
+    font-size: 1.5rem;
+    font-family: "Arial";
+    letter-spacing:3px;
+}
+
+.twitter-feed-position{
+    margin-left: 16px;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: blue;
+    font-family: "Arial";
+}
+
+.feedback{
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    padding: 10px 0px 0px 16px;
+    font-family: "Arial";
+}
+
+.photo{
+    background-color:gray;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    font-size: 1.25rem;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.card-content{
+    padding: 16px;
+}
+
+.twitter-next{
+    padding: 16px;
+    text-align: center;
+    font-family: "Arial";
+    letter-spacing:3px;
+}
+
+.calander{
+    width: 65%;
+    border-left: 3px solid grey;
+}
+
+#nav ul {
+    list-style: none;
+    /* margin-left: 20px; */
+    display: flex;
+}
+ 
+#nav li {
+    display: inline;
+    width: 100px;
+    font-size: 0.9rem;
+    line-height: 50px;
+    padding-left: 30px;
+    float:left;
+    text-align: center;
+}
+ 
+#nav a {
+    color:black;
+    text-decoration: none;
+    padding: 20px 20px;
+}
+
+.time{
+    padding-top: 1rem;
+    padding-left: 3rem
+}
